@@ -33,8 +33,7 @@ from bokeh.palettes import Category20_16, Spectral4
 from bokeh.application.handlers import FunctionHandler
 from bokeh.application import Application
 
-!gdown --id 1WPBwt1NA3JdDfgmDUekw0WBiYKwzs7Dt
-data = pd.read_csv('world-happiness-report.csv')
+data = pd.read_csv('./data/world-happiness-report.csv')
 data = data.rename(columns = lambda x : x.replace(' ','_'))
 data = data.dropna().reset_index(drop = True)
 data.columns = data.columns.str.lower()
